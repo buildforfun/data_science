@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sources of electricity production</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Sources of electricity production</h1>
+    <div id="co2-calculator"></div>
+
+    <!-- Form for user input with dynamic dropdown list -->
+    <form id="userInputForm">
+        <label for="inputValue">Select a Country:</label>
+        <select id="inputValue" name="inputValue" required></select>
+        <button type="submit">Display data</button>
+    </form>
+
+    <!-- Chart canvas -->
+    <canvas id="co2-chart" width="200" height="150"></canvas>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+</body>
+</html>
